@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+body {
+  background-color: #E3DDC6;
+  padding: 100px;
+  font-family: 'Raleway';
+  font-size: 15px;
+  font-weight: regular;
+}
+
+.jumbotron {
+  background-color: #FAF8F0;
+  box-shadow: 0px 0px 55px 0px #B5B09F;
+}
+
+a, a:visited {
+  color: #444;
+}
+
+a:hover {
+  color: #7B96C1;
+  text-decoration: none;
+}
+    </style>
+<script>
+function process() {
+    var searchTerm = '/search/' + document.getElementById("searchTerm").value + '?page=1';
+    location.href = searchTerm;
+    return false;
+}
+</script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Image Search</h1>
+            <br>
+
+<form onSubmit="return process();">
+    Search for: <input type="text" name="searchTerm" id="searchTerm"> <input type="submit" value="Go">
+</form><br>
+<div style="padding-left: 50px;">
+  <h3><a href="/latest/">Last 10 searches</a></h3>
+  </div>
+
+
+    
+</body>
+</html>
